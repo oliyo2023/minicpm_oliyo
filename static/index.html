@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本输入和播放器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #textInput {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #player {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>文本输入和播放器</h1>
+    <input type="text" id="textInput" placeholder="请输入文本">
+    <audio id="player" controls>
+        <source src="path/to/your/audio/file.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <script>
+        // 这里可以添加JavaScript代码来处理输入和播放器的交互
+        const textInput = document.getElementById('textInput');
+        const player = document.getElementById('player');
+
+        textInput.addEventListener('input', function() {
+            console.log('输入的文本：', this.value);
+            // 这里可以添加更多的逻辑，比如根据输入文本更改音频源
+        });
+    </script>
+</body>
+</html>
